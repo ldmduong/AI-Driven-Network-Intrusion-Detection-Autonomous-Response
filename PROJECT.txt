@@ -1,0 +1,41 @@
+1. Dataset split và leakage protocol
+2. State/action/reward/transition của simulator
+3. Rule-based baseline
+4. Metrics và evaluation protocol
+5. XGBoost + Autoencoder
+6. DQN
+7. FastAPI + tests
+8. Docker + MLflow
+9. Prometheus/Grafana
+10. CI/CD
+
+**** DANG DUNG NOTEBOOK
+
+1. Xử lý dữ liệu dataset
+1. Kiểm tra NaN / Inf       → đã xong
+2. Kiểm tra duplicate       → đang làm
+3. Chuẩn hóa nhãn
+4. Kiểm tra class imbalance
+5. Chia train/validation/test
+6. Lưu dữ liệu processed
+7. Sau đó mới bắt đầu model
+
+2. Xử lý autoencoder
+
+Kiem tra so shape cua tap train
+Kiem tra tap binh thuong / toan bo tap du lieu
+Kiem tra du lieu dau voa co isNan hay isInf => constant phai rong
+test scaler tren 10000 dong
+Chuan bi du lieu input flow => autoencoder => reconstruct flow
+tao model train dung pytorch
+tinh cac thong so ban dau => chon threshold
+lap bang percentile => thershold tung truong hop
+dung tap validation de test => bang gom thershold va predicted anomali
+Matrix confusion table
+Doc + khai thac du lieu tu matrix
+Train lai nhieu vong lap hon
+tinh Error tren toan bo tap du lieu
+Chon lai thershold nhu ban dau => so sanh
+Ve bieu do pp recon error normal/atk, duong thershold, precision/recall
+Luu artifact/ model
+viet ket luan notebook
